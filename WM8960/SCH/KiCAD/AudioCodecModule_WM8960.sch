@@ -317,17 +317,6 @@ F 3 "~" H 7225 1200 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:C C10
-U 1 1 5FB9E885
-P 6925 1200
-F 0 "C10" H 6900 1050 50  0000 R CNN
-F 1 "100n" H 6900 1125 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6963 1050 50  0001 C CNN
-F 3 "~" H 6925 1200 50  0001 C CNN
-	1    6925 1200
-	-1   0    0    1   
-$EndComp
-$Comp
 L Device:L L1
 U 1 1 5FBA1D13
 P 6225 1400
@@ -350,8 +339,6 @@ F 3 "~" H 6625 1400 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	6775 1400 6925 1400
-Wire Wire Line
 	7525 1400 7525 1350
 Wire Wire Line
 	7225 1500 7225 1400
@@ -360,11 +347,6 @@ Wire Wire Line
 	7225 1400 7525 1400
 Wire Wire Line
 	7225 1350 7225 1400
-Wire Wire Line
-	6925 1350 6925 1400
-Connection ~ 6925 1400
-Wire Wire Line
-	6925 1400 7225 1400
 Wire Wire Line
 	6475 1400 6375 1400
 Wire Wire Line
@@ -400,10 +382,6 @@ Wire Wire Line
 Connection ~ 7225 950 
 Wire Wire Line
 	7225 950  7525 950 
-Wire Wire Line
-	6925 1050 6925 950 
-Wire Wire Line
-	6925 950  7225 950 
 Wire Wire Line
 	4825 1225 4825 950 
 Wire Wire Line
@@ -628,26 +606,8 @@ F 3 "~" H 4400 3550 50  0001 C CNN
 	1    4400 3550
 	0    1    1    0   
 $EndComp
-$Comp
-L Device:C C2
-U 1 1 5FE01F82
-P 3775 2300
-F 0 "C2" H 3660 2254 50  0000 R CNN
-F 1 "47p" H 3660 2345 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3813 2150 50  0001 C CNN
-F 3 "~" H 3775 2300 50  0001 C CNN
-	1    3775 2300
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
-	3775 2150 3775 2100
-Wire Wire Line
-	3775 2100 4425 2100
-Connection ~ 4425 2100
-Wire Wire Line
-	3775 2450 3775 3550
-Wire Wire Line
-	3775 3550 4250 3550
+	3875 3550 4250 3550
 Text Label 4200 4325 0    50   ~ 0
 MCLK
 Text Label 3050 4175 2    50   ~ 0
@@ -1126,13 +1086,10 @@ Wire Wire Line
 Connection ~ 5275 950 
 Wire Wire Line
 	5650 950  5775 950 
-Connection ~ 6925 950 
 Wire Wire Line
 	5775 1400 5775 950 
 Connection ~ 5775 1400
 Connection ~ 5775 950 
-Wire Wire Line
-	5775 950  6925 950 
 Wire Wire Line
 	5675 2125 5675 1400
 Wire Wire Line
@@ -1518,7 +1475,7 @@ $Comp
 L Device:R R1
 U 1 1 6068F5ED
 P 6975 4025
-F 0 "R1" V 6925 4275 50  0000 C CNN
+F 0 "R1" V 6925 4225 50  0000 C CNN
 F 1 "0R" V 6925 4375 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 6905 4025 50  0001 C CNN
 F 3 "~" H 6975 4025 50  0001 C CNN
@@ -1529,7 +1486,7 @@ $Comp
 L Device:R R2
 U 1 1 6069057E
 P 6975 4125
-F 0 "R2" V 6925 4375 50  0000 C CNN
+F 0 "R2" V 6925 4325 50  0000 C CNN
 F 1 "0R" V 6925 4475 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 6905 4125 50  0001 C CNN
 F 3 "~" H 6975 4125 50  0001 C CNN
@@ -1540,7 +1497,7 @@ $Comp
 L Device:R R9
 U 1 1 60692385
 P 6975 4375
-F 0 "R9" V 6925 4575 50  0000 C CNN
+F 0 "R9" V 6925 4550 50  0000 C CNN
 F 1 "0R" V 6925 4700 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 6905 4375 50  0001 C CNN
 F 3 "~" H 6975 4375 50  0001 C CNN
@@ -1755,4 +1712,8 @@ Text Label 6425 2925 0    50   ~ 0
 SPK_RP
 Text Label 6425 3025 0    50   ~ 0
 SPK_RN
+Wire Wire Line
+	5775 950  7225 950 
+Wire Wire Line
+	6775 1400 7225 1400
 $EndSCHEMATC
